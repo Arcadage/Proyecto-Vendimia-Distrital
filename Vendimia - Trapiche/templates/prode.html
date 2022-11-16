@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css' ) }}">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="candidata1" class="f maximizado" style="display: none;background-color: rgb(255, 255, 255); width: 1166px; height: 436px; top: 15%; left: 100px; position: absolute; z-index: 99;"">
+        <img src="{{ url_for('static', filename= leer["1"]["Imagen"]) }}">
+        <div class="distrito" id="1">{{leer["1"]["Nombre"]}}</div>
+        <div>
+            <div class="nombre">{{leer["1"]["Nombre"]}}</div>
+            <ul class="datos">
+                <li>Edad: {{leer["1"]["Edad"]}} años</li>
+                <li>Distrito: {{leer["1"]["Distrito"]}}</li>
+                <li>Estudios: {{leer["1"]["Estudios"]}}</li>
+            </ul>
+            <div class="peticion">
+                <form action="/" method="get">
+        
+                <input class="botonv" type="submit"  value="Votar Geraldina" name="candidata" style="width: 200px;height: 70px;font-size: 20px; "/>
+                    
+                </form>
+                <a href="javascript:cerrar('candidata1')">
+                    <button class="botonc" style="width: 200px;height: 70px;font-size: 20px;">Cerrar</button>
+                </a>
+            </div>
+        </div>  
+    </div>
+
+    <div id="candidata2" class="f maximizado" style="display: none;background-color: rgb(255, 255, 255); width: 1166px; height: 436px; top: 15%; left: 100px; position: absolute; z-index: 99;">
+        <img src="{{ url_for('static', filename= leer["2"]["Imagen"]) }}">
+        <div class="distrito" id="1">{{leer["2"]["Nombre"]}}</div>
+        <div>
+            <div class="nombre">{{leer["2"]["Nombre"]}}</div>
+            <ul class="datos">
+                <li>Edad: {{leer["2"]["Edad"]}} años</li>
+                <li>Distrito: {{leer["2"]["Distrito"]}}</li>
+                <li>Estudios: {{leer["2"]["Estudios"]}}</li>
+            </ul>
+            <div class="peticion">
+                <form action="/" method="get">
+                    <input type="submit"  value="Votar Catalina" name="candidata" style="width: 200px;height: 70px;font-size: 20px;"/>
+
+                </form>
+                <a href="javascript:cerrar('candidata2')">
+                    <button class="botonc" style="width: 200px;height: 70px;font-size: 20px;">Cerrar</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="candidata3" class="f maximizado" style="display: none;background-color: rgb(255, 255, 255); width: 1166px; height: 436px; top: 15%; left: 100px; position: absolute; z-index: 99;">
+        <img src="{{ url_for('static', filename=leer["3"]["Imagen"]) }}">
+        <div class="distrito" id="1">{{leer["3"]["Nombre"]}}</div>
+        <div>
+            <div class="nombre">{{leer["3"]["Nombre"]}}</div>
+            <ul class="datos">
+                <li>Edad: {{leer["3"]["Edad"]}} años</li>
+                <li>Distrito: {{leer["3"]["Distrito"]}}</li>
+                <li>Estudios: {{leer["3"]["Estudios"]}}</li>
+            </ul>
+            <div class="peticion">
+                <form action="/" method="get">
+                    <input type="submit"  value="Votar Katherina" name="candidata" style="width: 200px;height: 70px;font-size: 20px;"/>
+
+                </form>
+                <a href="javascript:cerrar('candidata3')">
+                    <button class="botonc" style="width: 200px;height: 70px;font-size: 20px;">Cerrar</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    
+
+
+
+
+    <div id="header">
+        <center>
+            <b>
+                <div id="titulo">VENDIMIA 2023</div>
+                <br>
+            </b>
+        </center>
+	    <div style="display: inline-block;width:20%; font-size: 40px"><a id="vpt" href="javascript:void(0)" style="color:#FFF"></a></div>
+    </div>
+    <center>
+    <div>
+    <div class="candidatas">
+        <div>
+        <a href="javascript:abrir('candidata1','Sarmiento')">
+            <div class="f">
+                <img src="{{ url_for('static', filename=leer["1"]["Imagen2"]) }}" />
+                <div class="distrito" id="1">{{leer["1"]["Nombre"]}}</div>
+            </div>
+        </a>
+        </div>
+
+        <div>
+        <a href="javascript:abrir('candidata2','Sarmiento')">
+            <div class="f">
+                <img src="{{ url_for('static', filename=leer["2"]["Imagen2"]) }}" />
+                <div class="distrito" id="1">{{leer["2"]["Nombre"]}}</div>
+            </div>
+        </a>
+        </div>
+
+        <div>
+        <a href="javascript:abrir('candidata3','Sarmiento')">
+            <div class="f">
+                <img src="{{ url_for('static', filename=leer["3"]["Imagen2"]) }}" />
+                <div class="distrito" id="1">{{leer["3"]["Nombre"]}}</div>
+            </div>
+        </a>
+        </div> 
+    </div>
+
+    </div>
+    </center>
+
+    <div id="footer" style="text-align: center; font-size: 32px; padding: 1.4%;"><div id="letras">PARA CONOCER MEJOR A NUESTRAS CANDIDATAS Y VOTAR, PRESIONE SOBRE LA IMAGEN.</div></div>
+
+    <script>
+        
+        function abrir(n,d){
+            document.getElementById(n).style.display="flex";
+            var h = document.getElementById('footer')
+            h.textContent = d;
+        }
+
+        function cerrar(n){
+            document.getElementById(n).style.display="none";
+            var h = document.getElementById('footer')
+            h.innerHTML = '<div id="letras">PARA CONOCER MEJOR A NUESTRAS CANDIDATAS Y VOTAR, PRESIONE SOBRE LA IMAGEN.</div>'
+        }
+    </script>
+
+</body>
+</html>

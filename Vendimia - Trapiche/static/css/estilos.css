@@ -1,0 +1,207 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#titulo {
+  /* background-color: rgba(140, 64, 212, 0.486);  */
+  background-color: rgba(110, 27, 98, 0.8);
+  height: 70px;
+  width: 100%;
+}
+
+body {
+  /* color: #FFF; */
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #FFC94D; */
+  background-image: url("fondovendimia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header {
+  display: block;
+  /* background-image: url('vendimia.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+
+  font-size: 60px;
+  min-height: 150px;
+  background-size: cover;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+.candidatas {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  width: 80%;
+  height: 700px;
+  /* border: solid 1px red; */
+}
+.candidatas > div {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  margin: 5px;
+  /* border: solid 1px red; */
+}
+
+#footer {
+  display: block;
+  /* background-image: url('fondovendimia.jpg');  */
+  /* background-repeat: no-repeat;
+    background-position: center; */
+  /* color: rgb(0, 0, 0); */
+  font-size: 90px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-size: 20%;
+  color: #fff;
+  text-shadow: #000;
+  /* background-color: rgba(140, 64, 212, 0.486);  */
+  background-color: rgba(110, 27, 98, 0.8);
+
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-position: center;
+}
+
+.f {
+  display: inline-block;
+  height: 150px;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  overflow: hidden;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 20px;
+}
+
+.f img {
+  transition: 0.5s ease-in-out;
+  margin: 0px;
+  width: 240px;
+  border: #000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.maximizado img {
+  margin: 50px;
+}
+
+.distrito {
+  /* color: white;  
+    /* background-image: url('fondoamarillo.jpg'); */
+  transition: 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgba(110, 27, 98, 0.8);
+  /*display: inline-block;*/
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  width: 241px;
+  /*z-index: 1;*/
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.maximizado .distrito {
+  left: 50px;
+  top: 369px;
+}
+
+.nombre,
+.datos,
+.f div img {
+  display: block;
+  text-align: left;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.maximizado .nombre,
+.maximizado .datos,
+.maximizado div img {
+  opacity: 1;
+}
+.nombre {
+  padding: 20px;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.datos {
+  font-size: 20px;
+}
+.maximizado > div > form > input {
+  margin: 100px;
+}
+
+.confirmar {
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  left: 390px;
+  top: 240px;
+  border: solid 1px;
+  padding: 50px;
+  font-size: 25px;
+}
+
+input {
+  background-color: rgba(110, 27, 98, 0.8);
+  color: #fff;
+  text-align: center;
+  left: 390px;
+  top: 240px;
+  border: solid 1px;
+  padding: 20px;
+  font-size: auto;
+  border-radius: 20px;
+}
+
+#votos {
+  background-color: aliceblue;
+  width: 50%;
+  height: 50%;
+  text-align: left;
+  position: relative;
+  top: 35%;
+  left: 26%;
+  border-radius: 20px;
+  margin: -25px 0 0 -25px;
+}
+
+#votos span {
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+#candidata1 {
+  display: none;
+}
+
+.peticion {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20%;
+  margin-left: 20%;
+}
+
+.peticion button {
+  background-color: darkgray;
+  border-radius: 20px;
+}
